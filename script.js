@@ -12,39 +12,30 @@ sliderValue.textContent = inputSlider.value;
 inputSlider.addEventListener('input', ()=>{
     sliderValue.textContent = inputSlider.value;
 });
-
 genBtn.addEventListener('click', ()=>{
     passBox.value = generatePassword();
 })
-
 let lowerChars = "abcdefghijklmnopqrstuvwxyz";
 let upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let allNumbers = "0123456789";
 let allSymbols = "~!@#$%^&*"; 
-
 // Function to generate Password
 function generatePassword(){
     let genPassword = "";
     let allChars = "";
-
     allChars  += lowercase.checked ? lowerChars : "";
     allChars  += uppercase.checked ? upperChars : "";
     allChars  += numbers.checked ? allNumbers : "";
     allChars  += symbols.checked ? allSymbols : "";
-
-
     if(allChars == "" || allChars.length == 0){
         return genPassword;
     }
-    
-
-    let i = 1;
+     let i = 1;
     while(i<=inputSlider.value){
         genPassword += allChars.charAt(Math.floor(Math.random() * allChars.length));
         i++;
     }
-
-    return genPassword;
+ return genPassword;
 }
 
 copyIcon.addEventListener('click', ()=>{
