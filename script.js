@@ -7,8 +7,6 @@ let numbers = document.getElementById("numbers");
 let symbols = document.getElementById("symbols");
 let genBtn = document.getElementById("genBtn");
 let copyIcon = document.getElementById("copyIcon");
-
-
 // Showing input slider value 
 sliderValue.textContent = inputSlider.value;
 inputSlider.addEventListener('input', ()=>{
